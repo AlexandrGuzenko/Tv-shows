@@ -10,7 +10,7 @@ import Categories from './ui/Categories.js';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { // когда просто писать ключ: значение, а когда "ключ": значение
+    this.state = { 
       content: [],
       loading: false,
       nothingFound: false,
@@ -34,7 +34,7 @@ class App extends Component {
     }
   }
 
-  sortFun(selector) { // если много объектов сортировки, то как сортировать лучше(про кучу ифов или свитч кейсов)?
+  sortFun(selector) { 
     const newContent = [...this.state.content];
     if (this.state.sort.direction === 'up' && selector === this.state.sort.sortOn) {
       const newSort = {
@@ -120,8 +120,6 @@ class App extends Component {
             .then((image) => {
               image.json().then((imageUrl) => {
                 const newItem = Object.assign({}, item);
-                // console.log(newItem);
-                // console.log(imageUrl);
                 if (imageUrl.tvposter) { // Перебор большинства возможных значений нахождения Url картинки в JSON объекте
                   newItem.url = imageUrl.tvposter[0].url;
                 } else if (imageUrl.clearlogo) {
@@ -135,7 +133,6 @@ class App extends Component {
                 }
                 prevContent.splice(index, 1, newItem);
                 this.setState({ content: prevContent });
-                // console.log(prevContent)
                 if (this.state.loading) this.setState({ loading: false });
               });
             });
