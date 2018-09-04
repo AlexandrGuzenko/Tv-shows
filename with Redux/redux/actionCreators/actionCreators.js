@@ -161,8 +161,9 @@ export const changePage = (page) => {
 export const sortFun = (selector) => {
   return (dispatch, getState) => {
     const newContent = [...getState().mainContent.content];
+    let newSort = {};
     if (getState().otherContent.sort.direction === 'up' && selector === getState().otherContent.sort.sortOn) {
-      const newSort = {
+      newSort = {
         sortOn: selector,
         direction: 'down',
       };
@@ -177,7 +178,6 @@ export const sortFun = (selector) => {
           if (a.rating < b.rating) return -1;
         });
       }
-      dispatch(setSort(newSort));
     } else {
       if (selector === 'year') {
         newContent.sort((a, b) => {
@@ -190,12 +190,12 @@ export const sortFun = (selector) => {
           if (a.rating < b.rating) return 1;
         });
       }
-      const newSort = {
+      newSort = {
         sortOn: selector,
         direction: 'up',
       };
-      dispatch(setSort(newSort));
     }
+    dispatch(setSort(newSort));
     dispatch(setNewContent(newContent));
   }
 }
