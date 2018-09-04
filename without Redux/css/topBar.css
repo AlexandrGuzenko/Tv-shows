@@ -1,0 +1,33 @@
+.top{
+  position:fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title{
+  width:20%;
+  text-align: center;
+  color: #6E90B7;
+}
+
+.searchField{
+  width:78%;
+  margin-right:15px;
+  background-color: #DFE9EE;
+  border-radius: 0 0 15px 15px;
+}
+
+.search{
+  float:right;
+  margin:15px 10px 0 0;
+  width: 200px;
+  position:relative;
+}
+
+.fas{
+  position:absolute;
+  right:10px;
+  top: 8px;
+  cursor:pointer;
+}

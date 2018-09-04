@@ -1,0 +1,14 @@
+.wrapper{
+  text-align: center;
+  margin-left: 50%;
+}
+
+.btn-toolbar{
+  display: inline-block;
+  width: 70%;
+}
+
+.smallWrapper{
+  text-align: center;
+  margin-left: 70%;
+}

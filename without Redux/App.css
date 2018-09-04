@@ -1,0 +1,45 @@
+.trends{
+  width:100%;
+  height: 50px;
+  background-color: grey;
+  
+}
+
+.content-page{
+  display: inline-block;
+  width: 80%;
+}
+
+
+
+.form-control{
+  display: inline-block;
+  padding-right: 40px;
+}
+
+.panel-group{
+  margin-bottom: 0;
+}
+
+/*
+loader
+*/
+
+/*
+end loader
+*/
+
+
+
+/* Table */
+
+
+
+.overview{
+  font-size: 14px;
+}
+
+/* categories */
+
+
+
